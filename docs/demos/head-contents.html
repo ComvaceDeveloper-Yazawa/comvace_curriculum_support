@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>headの中身デモ</title>
+  <style>
+    body { font-family: "Yu Gothic", sans-serif; margin: 20px; }
+    .grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    iframe { width: 320px; height: 180px; border: 2px solid #222; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <iframe
+      title="悪い例"
+      srcdoc='<!doctype html><html lang="ja"><head><meta charset="UTF-8"></head><body style="font-family:sans-serif;background:#fff3f0;padding:12px;"><h2>悪い例</h2><p>タブ名: <strong id="title"></strong></p><script>document.getElementById("title").textContent = document.title || "(空)";</script></body></html>'
+    ></iframe>
+    <iframe
+      title="良い例"
+      srcdoc='<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HTML/CSSの学習</title></head><body style="font-family:sans-serif;background:#f1fff2;padding:12px;"><h2>良い例</h2><p>タブ名: <strong id="title"></strong></p><script>document.getElementById("title").textContent = document.title || "(空)";</script></body></html>'
+    ></iframe>
+  </div>
+</body>
+</html>

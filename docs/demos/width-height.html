@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>幅と高さ</title>
+  <style>
+    body { font-family: "Yu Gothic", sans-serif; margin: 20px; }
+    .grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .panel { border: 2px solid #222; padding: 12px; width: 280px; }
+    .bad { background: #fff3f0; }
+    .good { background: #f1fff2; }
+    .card { background: #0b6bff; color: white; padding: 8px; }
+    .bad .card { width: 120px; height: 60px; }
+    .good .card { width: 240px; height: 100px; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <section class="panel bad">
+      <h2>悪い例: 小さすぎる</h2>
+      <div class="card">文字が窮屈に見える</div>
+    </section>
+    <section class="panel good">
+      <h2>良い例: 余裕を確保</h2>
+      <div class="card">読みやすいサイズ</div>
+    </section>
+  </div>
+</body>
+</html>

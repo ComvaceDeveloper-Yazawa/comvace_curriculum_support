@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>リセットCSS</title>
+  <style>
+    body { font-family: "Yu Gothic", sans-serif; margin: 20px; }
+    .grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .panel { border: 2px solid #222; padding: 12px; width: 320px; }
+    .bad { background: #fff3f0; }
+    .good { background: #f1fff2; }
+    .bad .frame { background: white; }
+    .good .frame * { margin: 0; padding: 0; box-sizing: border-box; }
+    .frame { border: 1px dashed #999; padding: 8px; }
+    .title { background: #0b6bff; color: white; padding: 6px; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <section class="panel bad">
+      <h2>悪い例: デフォルトの余白</h2>
+      <div class="frame">
+        <h3 class="title">見出し</h3>
+        <p>段落の上に余白が入る</p>
+      </div>
+    </section>
+    <section class="panel good">
+      <h2>良い例: 最低限のリセット</h2>
+      <div class="frame">
+        <h3 class="title">見出し</h3>
+        <p>余白が揃う</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

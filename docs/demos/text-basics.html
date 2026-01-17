@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>文字の基本</title>
+  <style>
+    body { font-family: "Yu Gothic", sans-serif; margin: 20px; }
+    .grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .panel { border: 2px solid #222; padding: 12px; width: 320px; }
+    .bad { background: #fff3f0; }
+    .good { background: #f1fff2; }
+    .bad .text { font-size: 16px; font-weight: 700; line-height: 1; }
+    .good .text { font-size: 16px; font-weight: 700; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <section class="panel bad">
+      <h2>悪い例: 行間が狭い</h2>
+      <p class="text">行間が詰まると読みづらい文章になります。目が疲れやすくなります。</p>
+    </section>
+    <section class="panel good">
+      <h2>良い例: 行間を広げる</h2>
+      <p class="text">行間が広いと読みやすい文章になります。スッと頭に入ります。</p>
+    </section>
+  </div>
+</body>
+</html>

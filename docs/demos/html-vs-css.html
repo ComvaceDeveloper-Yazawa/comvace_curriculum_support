@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTMLとCSSの役割</title>
+  <style>
+    body { font-family: "Yu Gothic", sans-serif; margin: 20px; }
+    .grid { display: flex; gap: 16px; flex-wrap: wrap; }
+    .panel { border: 2px solid #222; padding: 12px; width: 280px; }
+    .bad { background: #fff3f0; }
+    .good { background: #f1fff2; }
+    .card { background: white; padding: 16px; border-radius: 12px; }
+    .card button { background: #0b6bff; color: white; border: 0; padding: 8px 12px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <section class="panel bad">
+      <h2>悪い例: HTMLだけ</h2>
+      <h1>学習カード</h1>
+      <p>CSSが無いので素の見た目です。</p>
+      <button>開始</button>
+    </section>
+    <section class="panel good">
+      <h2>良い例: CSSで見た目を作る</h2>
+      <div class="card">
+        <h1>学習カード</h1>
+        <p>同じHTMLでも見やすくなります。</p>
+        <button>開始</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
