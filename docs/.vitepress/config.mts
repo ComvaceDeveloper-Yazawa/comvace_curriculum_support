@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Comvace カリキュラムサポート",
   description: "HTML / CSS / Vue / TypeScript の初心者向け解説",
-  base: "/comvace_curriculum_support/",
+  base: "/comvace_curriculum_support",
   themeConfig: {
     nav: [{ text: "ホーム", link: "/" }],
 
