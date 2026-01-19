@@ -1,3 +1,14 @@
-# TypeScript
+# TypeScript 基礎
 
-Welcome to the TypeScript section. More content will be added soon.
+この章では、
+「型を付けてミスを減らす」考え方を学びます。
+
+## この章で身につくこと
+- TypeScript の役割が分かる
+- JavaScript との違いが分かる
+- 実務で安心して書ける土台ができる
+
+## 学び方の目安
+最初は「ここに文字が入る」「ここに数が入る」
+この感覚がつかめれば十分です。
+具体的なチュートリアルは順次追加します。
