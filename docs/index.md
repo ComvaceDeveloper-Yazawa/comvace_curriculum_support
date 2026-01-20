@@ -6,8 +6,6 @@ hero:
   tagline: 本当に初めての人向けに、やさしく解説
   actions:
     - theme: brand
-      text: 第1章：HTMLとはなにか？
+      text: 記事一覧へ
       link: /guide/html/01-what-is-html
 ---
-
-# ガイド
