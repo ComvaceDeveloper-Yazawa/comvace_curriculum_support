@@ -58,6 +58,28 @@ export default defineConfig({
               },
             ],
           },
+
+          {
+            text: "TypeScript",
+            items: [
+              {
+                text: "TypeScriptとはなにか？",
+                link: "/guide/typescript/01-what-is-typescript",
+              },
+              {
+                text: "まず覚える基本の型",
+                link: "/guide/typescript/02-basic-types",
+              },
+              {
+                text: "関数とユニオン型の入門",
+                link: "/guide/typescript/03-function-and-union",
+              },
+              {
+                text: "TypeScript入門のまとめ",
+                link: "/guide/typescript/04-typescript-summary",
+              },
+            ],
+          },
         ],
       },
 
@@ -120,6 +142,99 @@ export default defineConfig({
               { text: "ボタンの作り方", link: "/guide/advanced/button" },
             ],
           },
+          {
+            text: "TypeScript",
+            items: [
+              {
+                text: "コンピュータとプログラムの基本",
+                link: "/guide/advanced/typescript/01-program-basics",
+              },
+              {
+                text: "コマンドってなに？（ターミナル入門）",
+                link: "/guide/advanced/typescript/02-command-basics",
+              },
+              {
+                text: "ローカルホストってなに？",
+                link: "/guide/advanced/typescript/03-localhost",
+              },
+              {
+                text: "Viteってなに？",
+                link: "/guide/advanced/typescript/04-what-is-vite",
+              },
+              {
+                text: "Viteで環境構築（Vanilla + TypeScript）",
+                link: "/guide/advanced/typescript/05-vite-setup-vanilla",
+              },
+              {
+                text: "package.jsonってなに？",
+                link: "/guide/advanced/typescript/06-package-json",
+              },
+              {
+                text: "検証ツールの使い方（DevTools）",
+                link: "/guide/advanced/typescript/07-devtools",
+              },
+              {
+                text: "コンソールってなに？",
+                link: "/guide/advanced/typescript/08-what-is-console",
+              },
+              {
+                text: "変数名・関数名・引数名の付け方",
+                link: "/guide/advanced/typescript/09-naming",
+              },
+              {
+                text: "ブロックスコープとグローバルスコープ",
+                link: "/guide/advanced/typescript/10-scope",
+              },
+              {
+                text: "配列ってなに？",
+                link: "/guide/advanced/typescript/11-array",
+              },
+              {
+                text: "オブジェクトってなに？",
+                link: "/guide/advanced/typescript/12-object",
+              },
+              {
+                text: "組み込みメソッド入門（文字列・配列）",
+                link: "/guide/advanced/typescript/13-built-in-methods",
+              },
+              {
+                text: "条件分岐とループの考え方",
+                link: "/guide/advanced/typescript/14-condition-loop",
+              },
+              {
+                text: "関数の設計入門（入力→処理→出力）",
+                link: "/guide/advanced/typescript/15-function-design",
+              },
+              {
+                text: "type と interface の違い",
+                link: "/guide/advanced/typescript/16-type-interface",
+              },
+              {
+                text: "型の絞り込み（Type Narrowing）",
+                link: "/guide/advanced/typescript/17-type-narrowing",
+              },
+              {
+                text: "APIデータの型付け（JSON→型）",
+                link: "/guide/advanced/typescript/18-api-typing",
+              },
+              {
+                text: "DOM操作の基礎（querySelector）",
+                link: "/guide/advanced/typescript/19-dom-basics",
+              },
+              {
+                text: "画面の入力とイベント（click / input）",
+                link: "/guide/advanced/typescript/20-events",
+              },
+              {
+                text: "ミスの読み方（TSエラー・実行時エラー）",
+                link: "/guide/advanced/typescript/21-error-reading",
+              },
+              {
+                text: "ミニ制作（検索UI）",
+                link: "/guide/advanced/typescript/22-mini-project",
+              },
+            ],
+          },
         ],
       },
 
@@ -130,7 +245,13 @@ export default defineConfig({
 
       {
         text: "TypeScript",
-        items: [{ text: "基礎", link: "/typescript/" }],
+        items: [
+          { text: "基礎", link: "/typescript/" },
+          { text: "TypeScriptとはなにか？", link: "/guide/typescript/01-what-is-typescript" },
+          { text: "まず覚える基本の型", link: "/guide/typescript/02-basic-types" },
+          { text: "関数とユニオン型の入門", link: "/guide/typescript/03-function-and-union" },
+          { text: "TypeScript入門のまとめ", link: "/guide/typescript/04-typescript-summary" },
+        ],
       },
 
       {
