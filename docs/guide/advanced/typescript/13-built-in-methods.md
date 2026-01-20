@@ -59,3 +59,9 @@ const firstHigh = scores.find((score) => score >= 85);
 - 配列: `map`, `filter`, `find`
 
 最初はこの6つを覚えれば十分です。
+
+## ❌ よくあるミス
+
+- `map` が元の配列を書き換えると思ってしまう
+- `filter` の結果が空配列でも正常だと気づかない
+- `includes` が大文字小文字を区別するのを知らない

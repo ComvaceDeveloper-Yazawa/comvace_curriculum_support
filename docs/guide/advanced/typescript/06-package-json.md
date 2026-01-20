@@ -52,3 +52,9 @@
 - `dependencies` は使う道具
 
 これだけ覚えておけば OK です。
+
+## ❌ よくあるミス
+
+- `scripts` の名前を間違えて `npm run dev` が動かない
+- `package.json` を消してしまい、プロジェクトが壊れる
+- `dependencies` を手で消してしまい、再インストールで困る

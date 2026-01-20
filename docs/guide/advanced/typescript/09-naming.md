@@ -61,3 +61,9 @@ const calcDiscount = (price: number, rate: number): number => {
 ```
 
 `price` と `rate` が何かが分かる名前です。
+
+## ❌ よくあるミス
+
+- `data` や `tmp` など意味の薄い名前ばかりになる
+- 単数と複数を混ぜて、配列なのか分からなくなる
+- 省略しすぎて自分でも読めなくなる

@@ -51,3 +51,9 @@ npm run dev
 「Vanilla」→「TypeScript」を選びます。
 
 これで最初から TypeScript が使える状態になります。
+
+## ❌ よくあるミス
+
+- `npm install` を忘れて `npm run dev` が失敗する
+- `cd my-app` を忘れて別の場所でコマンドを打つ
+- テンプレ選択で JavaScript を選んでしまう

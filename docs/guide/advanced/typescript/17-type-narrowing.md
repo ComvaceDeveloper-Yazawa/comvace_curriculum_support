@@ -55,3 +55,9 @@ const size = (value: string | string[]): number => {
 - `Array.isArray`: 配列かどうか
 
 この3つが分かれば十分です。
+
+## ❌ よくあるミス
+
+- 絞り込みせずにメソッドを呼んでエラーになる
+- `in` で判定できるキーを間違える
+- どの分岐でも `return` していない
