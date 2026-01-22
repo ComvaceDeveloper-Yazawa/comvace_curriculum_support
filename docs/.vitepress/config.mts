@@ -253,6 +253,22 @@ export default defineConfig({
             link: "/guide/vue/04-components-props",
           },
           { text: "Vue入門のまとめ", link: "/guide/vue/05-vue-summary" },
+          {
+            text: "Vueの基本用語と書き方",
+            link: "/guide/vue/06-vue-basics-terms",
+          },
+          {
+            text: "Pinia入門（何か・いつ使うか・環境構築）",
+            link: "/guide/vue/07-pinia-basics",
+          },
+          {
+            text: "Pinia実践（storeToRefsと更新方法）",
+            link: "/guide/vue/08-pinia-usage",
+          },
+          {
+            text: "Vディレクティブ完全ガイド",
+            link: "/guide/vue/09-v-directives",
+          },
         ],
       },
       {
