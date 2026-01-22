@@ -2,33 +2,17 @@
 
 ## この章で身につくこと
 
-- Piniaとは何か、どんなときに使うかが分かる
-- Piniaの環境構築ができる
-- setup storeの基本形が分かる
+- Piniaの導入手順を順番どおりに理解できる
+- storeファイルの作り方と命名規則が分かる
+- テンプレートでの呼び出し方が分かる
 
-## 7-1 Piniaってなに？どんなときに使う？
-
-Piniaは、**アプリ全体で共有したい状態（データ）をまとめる場所**です。
-Vueだけだと、データを渡すために `props` や `emit` を何層も繋ぐ必要があります。
-Piniaを使うと、どのコンポーネントからでも同じデータを参照・更新できます。
-
-よく使うシーン
-
-- ログイン情報（ユーザー名・トークン）
-- カート・お気に入り・通知などの「全体に関わる状態」
-- 画面をまたいで引き継ぎたいデータ
-
-小さい画面だけならPiniaは不要です。**「複数画面で共有する状態が出てきたら」導入**が目安です。
-
-## 7-2 Piniaの環境構築（超わかりやすく）
-
-1) インストール
+## 7-1 npm i pinia でインストールする
 
 ```bash
 npm i pinia
 ```
 
-2) `main.ts` に登録
+## 7-2 main.ts で登録する
 
 ```ts
 import { createApp } from "vue";
@@ -42,7 +26,17 @@ app.mount("#app");
 
 これで「どのコンポーネントからでもstoreが使える状態」になります。
 
-## 7-3 setup storeの基本形（Piniaの推奨）
+## 7-3 storesフォルダを作る（命名規則）
+
+基本の配置は `src/stores` です。
+ファイル名は **`use◯◯Store.ts`** の形が分かりやすいです。
+
+例
+
+- `src/stores/useCounterStore.ts`
+- `src/stores/useUserStore.ts`
+
+## 7-4 storeファイルの中身はこう
 
 Piniaはsetup storeで使うのが基本です。
 
@@ -61,3 +55,29 @@ export const useCounterStore = defineStore("counter", () => {
   return { count, double, increment };
 });
 ```
+
+## 7-5 テンプレートで呼び出すにはこう
+
+```vue
+<template>
+  <p>count: {{ count }}</p>
+  <button @click="increment">+1</button>
+</template>
+
+<script setup lang="ts">
+import { storeToRefs } from "pinia";
+import { useCounterStore } from "@/stores/useCounterStore";
+
+const store = useCounterStore();
+const { count } = storeToRefs(store);
+const increment = () => {
+  store.increment();
+};
+</script>
+```
+
+## 7-6 検証ツールで見れる場所
+
+Piniaの状態は **Vue Devtools の「Pinia」タブ**で確認できます。
+ローカルストレージに自動で保存されるわけではないので注意してください。
+永続化したい場合は、別途プラグインを使って `localStorage` に保存します。
