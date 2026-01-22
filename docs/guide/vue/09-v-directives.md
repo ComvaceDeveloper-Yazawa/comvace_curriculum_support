@@ -29,10 +29,63 @@ Vueでよく使う `v-` は、全部で以下の通りです。
 - `v-if` / `v-else-if` / `v-else`：表示の切り替え
 - `v-show`：`display: none` で切り替え
 
+#### プレビュー（ボタンで表示切り替え）
+
+下のコードを動かすと、ボタンを押すたびにメッセージが表示/非表示になります。
+
+```vue
+<template>
+  <button @click="isOpen = !isOpen">Toggle</button>
+  <p v-if="isOpen">メニューが開いています</p>
+</template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+
+const isOpen = ref(false);
+</script>
+```
+
+<DemoPreview
+  :html="`
+  <div class='demo'>
+    <button id='toggle'>Toggle</button>
+    <p id='message' class='message'>メニューが開いています</p>
+  </div>
+  <script>
+    const button = document.getElementById('toggle')
+    const message = document.getElementById('message')
+    let isOpen = true
+    button.addEventListener('click', () => {
+      isOpen = !isOpen
+      message.style.display = isOpen ? 'block' : 'none'
+    })
+  </script>
+  `"
+  :css="`
+  .demo { font-family: sans-serif; padding: 16px; }
+  button { padding: 6px 12px; }
+  .message { margin-top: 12px; }
+  `"
+/>
+
+なぜ表示が切り替わるかというと、`v-if` が `isOpen` の値を見て
+`true` なら描画、`false` なら非表示にしているからです。
+
 ```vue
 <p v-if="ok">OK</p>
 <p v-else>NG</p>
 ```
+
+#### v-if と v-show の使い分け
+
+- `v-if`：条件が`false`だと**DOMごと消える**。初期表示しない画面に向く
+- `v-show`：条件が`false`でも**DOMは残る**。頻繁に出し入れするUIに向く
+
+使い分けの目安
+
+- ログイン前後で画面を入れ替える → `v-if`
+- 開閉を何度も繰り返すモーダルやメニュー → `v-show`
 
 ### ループ
 
@@ -40,6 +93,80 @@ Vueでよく使う `v-` は、全部で以下の通りです。
 
 ```vue
 <li v-for="item in items" :key="item.id">{{ item.name }}</li>
+```
+
+#### プレビュー（配列を回すとこう表示される）
+
+次の配列を `v-for` で回すと、画面には 3 つの選択肢が表示されます。
+
+```ts
+const menu = [
+  { id: 1, label: "Home", value: "home" },
+  { id: 2, label: "About", value: "about" },
+  { id: 3, label: "Contact", value: "contact" },
+];
+```
+
+```vue
+<template>
+  <select>
+    <option
+      v-for="item in menu"
+      :key="item.id"
+      :value="item.value"
+      :label="item.label"
+    >
+      {{ item.label }}
+    </option>
+  </select>
+</template>
+```
+
+<DemoPreview
+  :html="`
+  <div class='demo'>
+    <label for='menu'>Menu:</label>
+    <select id='menu'>
+      <option value='home'>Home</option>
+      <option value='about'>About</option>
+      <option value='contact'>Contact</option>
+    </select>
+  </div>
+  `"
+  :css="`
+  .demo { font-family: sans-serif; padding: 16px; }
+  select { margin-left: 8px; }
+  `"
+/>
+
+なぜ画面にこの文字が出ているかというと、`item.label` を
+テンプレートにバインドしているからです。
+`value` も `:value="item.value"` で紐づいています。
+
+#### v-for は「配列（またはオブジェクト）」で使う
+
+`v-for` は基本的に**配列を回すための機能**です。
+オブジェクトも回せますが、最初は配列が分かりやすいです。
+
+```ts
+const items = [
+  { id: 1, name: "Apple" },
+  { id: 2, name: "Orange" },
+];
+```
+
+使う場面の例
+
+- 商品一覧、記事一覧、コメント一覧などの「リスト表示」
+- ボタンやカードをデータから生成したいとき
+
+`v-for` では `:key` が必須です。
+`id` のような「一意の値」を渡すと、更新が正しくなります。
+
+```vue
+<li v-for="item in items" :key="item.id">
+  {{ item.name }}
+</li>
 ```
 
 ### イベント
