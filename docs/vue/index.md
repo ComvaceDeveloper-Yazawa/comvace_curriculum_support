@@ -11,3 +11,10 @@ HTML/CSSで作った画面に「動き」を付ける考え方を学びます。
 ## 学び方の目安
 まずは「画面は部品の集まり」という考え方に慣れましょう。
 具体的なチュートリアルは順次追加します。
+
+## 入門編の順番
+- [第1章：Vueってなに？](/guide/vue/01-what-is-vue)
+- [第2章：ViteでVueを始める](/guide/vue/02-vite-setup)
+- [第3章：テンプレートとデータのつなぎ方](/guide/vue/03-template-binding)
+- [第4章：コンポーネントとProps](/guide/vue/04-components-props)
+- [第5章：Vue入門のまとめ](/guide/vue/05-vue-summary)

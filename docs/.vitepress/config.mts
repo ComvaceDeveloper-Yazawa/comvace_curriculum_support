@@ -62,6 +62,7 @@ export default defineConfig({
           {
             text: "TypeScript",
             items: [
+              { text: "学習するメリット", link: "/typescript/" },
               {
                 text: "TypeScriptとはなにか？",
                 link: "/guide/typescript/01-what-is-typescript",
@@ -237,23 +238,23 @@ export default defineConfig({
           },
         ],
       },
-
       {
         text: "Vue.js",
-        items: [{ text: "入門", link: "/vue/" }],
-      },
-
-      {
-        text: "TypeScript",
         items: [
-          { text: "基礎", link: "/typescript/" },
-          { text: "TypeScriptとはなにか？", link: "/guide/typescript/01-what-is-typescript" },
-          { text: "まず覚える基本の型", link: "/guide/typescript/02-basic-types" },
-          { text: "関数とユニオン型の入門", link: "/guide/typescript/03-function-and-union" },
-          { text: "TypeScript入門のまとめ", link: "/guide/typescript/04-typescript-summary" },
+          { text: "入門", link: "/vue/" },
+          { text: "Vueってなに？", link: "/guide/vue/01-what-is-vue" },
+          { text: "ViteでVueを始める", link: "/guide/vue/02-vite-setup" },
+          {
+            text: "テンプレートとデータのつなぎ方",
+            link: "/guide/vue/03-template-binding",
+          },
+          {
+            text: "コンポーネントとProps",
+            link: "/guide/vue/04-components-props",
+          },
+          { text: "Vue入門のまとめ", link: "/guide/vue/05-vue-summary" },
         ],
       },
-
       {
         text: "よくあるエラー",
         items: [{ text: "トラブルシューティング", link: "/errors/" }],
