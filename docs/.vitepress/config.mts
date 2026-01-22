@@ -271,10 +271,6 @@ export default defineConfig({
           },
         ],
       },
-      {
-        text: "よくあるエラー",
-        items: [{ text: "トラブルシューティング", link: "/errors/" }],
-      },
     ],
   },
 });
