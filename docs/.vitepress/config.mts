@@ -269,6 +269,10 @@ export default defineConfig({
             text: "Vディレクティブ完全ガイド",
             link: "/guide/vue/09-v-directives",
           },
+          {
+            text: "Axios入門（超初学者向け）",
+            link: "/guide/vue/10-axios-basics",
+          },
         ],
       },
     ],

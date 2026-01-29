@@ -22,3 +22,4 @@ HTML/CSSで作った画面に「動き」を付ける考え方を学びます。
 - [第7章：Pinia入門（何か・いつ使うか・環境構築）](/guide/vue/07-pinia-basics)
 - [第8章：Pinia実践（storeToRefsと更新方法）](/guide/vue/08-pinia-usage)
 - [第9章：Vディレクティブ完全ガイド](/guide/vue/09-v-directives)
+- [第10章：Axios入門（超初学者向け）](/guide/vue/10-axios-basics)
